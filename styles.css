@@ -1,0 +1,101 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff; /* Changed to white */
+  padding: 40px 20px;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Accordion Styles */
+.accordion {
+  background: transparent; /* Changed to transparent */
+  border-radius: 10px;
+  overflow: visible; /* Changed to visible for shadow */
+}
+
+.accordion-item {
+  margin-bottom: 10px; /* Added spacing between items */
+  border-bottom: none; /* Removed border */
+}
+
+/* Accordion Header */
+.accordion-header {
+  width: 100%;
+  padding: 20px;
+  background: #000; /* Changed to pure black */
+  color: #fff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 10px; /* Added rounded corners */
+}
+
+.accordion-header:hover {
+  background: #222;
+}
+
+/* Accordion Icon */
+.icon {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(180deg);
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fff;
+  margin-top: 2px; /* Added space between header and content */
+}
+
+.accordion-content p {
+  padding: 20px;
+  color: #333;
+}
+
+/* Active State */
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  border: 1px solid #e0e0e0; /* Added border */
+  border-radius: 10px; /* Added rounded corners */
+  margin: 10px 0; /* Added vertical spacing */
+}
+
+/* Remove border from last item */
+.accordion-item:last-child {
+  margin-bottom: 0;
+}
